@@ -19,21 +19,19 @@ namespace GeekBrainsDZ5
     {
         static void Main(string[] args)
         {
-            // myReg = new Regex(@"[A-Z]{2,8}");
-            //if (myReg.IsMatch("QQQQQQQQQQQQQQQQQQQQQ"))
-            //   Console.WriteLine("TRUE");
-
+            Console.WriteLine("Программа проверяет правильность ввода логина на соответствие некоторых критериев. Введите логин");
+            string str = Console.ReadLine();
             //а) без использования регулярных выражений;
-            //string str = Console.ReadLine();
-            //char mychar = str[0];
-            //if (str.Length > 1 && str.Length < 11 && char.GetNumericValue(mychar) == -1)
-            //{
-            //    Console.WriteLine("Логин корректный");
-            //}
+
+            char mychar = str[0];
+            if (str.Length > 1 && str.Length < 11 && char.GetNumericValue(mychar) == -1)
+            {
+                Console.WriteLine("Логин корректный");
+            }
 
             //б) ** с использованием регулярных выражений
-            Regex myregex = new Regex(@"[A-Za-z]+([A-Za-z0-9]{1,9})$");
-            if (myregex.IsMatch("1UserUserUser"))
+            Regex myregex = new Regex(@"^[A-Za-z]{1}[A-Za-z0-9]{1,9}$");
+            if (myregex.IsMatch(str))
             {
                 Console.WriteLine("Логин корректный");
             }
