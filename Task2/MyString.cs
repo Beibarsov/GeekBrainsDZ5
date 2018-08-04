@@ -19,6 +19,16 @@ namespace Task2
             this.text = string.Empty;
         }
 
+        public string Text
+        {
+            get
+            {
+                return text;
+            }
+
+        }
+
+
         /// <summary>
         /// Конструктор, где значение строки передаётся параметром
         /// </summary>
@@ -34,9 +44,9 @@ namespace Task2
         public void WriteNeBoleeBukv()
         {
 
-            Regex myregex = new Regex(@"[а-яА-Я0-9]+\>");
-            myregex.
-                Console.WriteLine(str);
+
+            //Math mymath = myregex.Match(text);
+            //mymath.ToString();
             //Console.WriteLine(text.Length);
             
         }

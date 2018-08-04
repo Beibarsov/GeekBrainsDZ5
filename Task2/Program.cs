@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 //2. Разработать методы для решения следующих задач.Дано сообщение:
 //а) Вывести только те слова сообщения, которые содержат не более чем n букв;
@@ -20,6 +21,15 @@ namespace Task2
         {
             MyString mystring = new MyString("Шла Саша по шоссе и цйуйуйуйц");
             mystring.WriteNeBoleeBukv();
+            //Regex myregex = new Regex(@"[а-яА-Я0-9]+\>");
+            //Regex regex = new Regex(@"[а-яА-Я0-9]+\>");
+            Regex regex = new Regex(@"\s");
+            Match match = regex.Match(mystring.Text);
+            Console.WriteLine(match.Value);
+            //Math mymath = regex.Match(mystring.Text);
+            Console.ReadLine();
+
+            //char.IsPunctuation();
         }
     }
 }
